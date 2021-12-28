@@ -52,8 +52,7 @@ const renderer = new THREE.WebGLRenderer({
 
 renderer.physicallyCorrectLights = true
 renderer.shadowMap = THREE.PCFSoftShadowMap
-// renderer.shadowMap.enabled = true
-renderer.setPixelRatio(window.devicePixelRatio) // added
+renderer.setPixelRatio(window.devicePixelRatio) // antialias for mobile
 renderer.outputEncoding = THREE.sRGBEncoding
 container_element.appendChild(renderer.domElement)
 
