@@ -1,0 +1,122 @@
+@media screen and (max-width: 950px) {
+  .summary_grid {
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .max-width-1 {
+    padding: 0px 30px;
+  }
+
+  #mercor_model {
+    /* height: 100%; */
+    height: 320px;
+    max-height: 320px;
+  }
+
+  .top_content {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  .top_content_left {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .contacts_grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  .contacts_grid_ {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  .contacts_left {
+    padding-top: 10px;
+    padding-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .inset_padding {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .send_recaptcha_grid {
+    grid-template-columns: auto;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .send_button {
+    /* margin-top: 10px; */
+    /* padding-top: 10px; */
+    margin: 0;
+  }
+  .email_phone_grid {
+    gap: 50px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  /* fixing input grid */
+  .email_imput_grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+  }
+
+  .header_content {
+    grid-template-columns: auto auto;
+  }
+
+  .contacts_grid {
+    padding: 0px;
+  }
+
+  .contacts_grid_ {
+    padding: 0px;
+    margin-bottom: 60px;
+    margin-top: 40px;
+  }
+
+  .contacts_left {
+    padding-top: 42px;
+    padding-bottom: 35px;
+  }
+
+  .input_and_placeholder {
+    padding: 0px 30px;
+    padding: 0px 0px;
+  }
+
+  .conditional_hide {
+    display: none;
+  }
+  .three_img_child {
+    max-height: 200px;
+  }
+
+  .contact_us_first {
+    background: var(--bg-col-2);
+    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px;
+  }
+  .contact_us_second {
+    background: var(--bg-col-2);
+    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px;
+    margin-bottom: 0px;
+  }
+  .summary_bot_text {
+    max-width: 180px;
+  }
+
+  .contacts_svg_ico {
+    transform: scale(0.85);
+  }
+}

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=1 , user-scalable=no" /> -->
+    <meta property="og:type" content="website" />
+
+    <!-- CDN IMPORTS -->
+    <!-- <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+      async
+      ></script> -->
+    <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
+    <!-- Glow Cookies v3.0.1 -->
+    <script src="https://cdn.jsdelivr.net/gh/manucaralmo/GlowCookies@3.0.1/src/glowCookies.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+
+    <meta
+      name="Description"
+      content="JSC Mercor Latvia Cargo shipping and services. Building materials and Packing paterials. Terrace Boards, Pine / Spruce. Exports to Egypt, Morocco, China, India."
+    />
+    <meta
+      property="og:title"
+      content="Timber export and purchase - China, India, South Africa, Africa - MERCOR AS"
+    />
+    <meta
+      property="og:description"
+      content="JSC Mercor Latvia Cargo shipping and services. Building materials and Packing paterials. Terrace Boards, Pine / Spruce. Exports to Egypt, Morocco, China, India."
+    />
+    <title>Mercor</title>
+
+    <!-- Panelbear Analytics - We respect your privacy -->
+    <!-- <script async src="https://cdn.panelbear.com/analytics.js?site=E5raX5HQw1h"></script> -->
+    <!-- <script>
+      window.panelbear =
+        window.panelbear ||
+        function () {
+          ;(window.panelbear.q = window.panelbear.q || []).push(arguments)
+        }
+      panelbear('config', { site: 'E5raX5HQw1h' })
+    </script> -->
+  </head>
+  <body>
+    <!-- header -->
+    <div class="flex-center grid header text-col-2 bg-col-1 py-18">
+      <div class="max-width-1">
+        <div class="grid header_content">
+          <div class="header_left font-fam-3 fs-7">MERCOR</div>
+          <div class="grid gap-20 header_right text-col-2 font-fam-4">
+            <div class="flex-center">
+              <a href="#services" class="remove-decoration">Services</a>
+            </div>
+            <div class="flex-center">
+              <a href="#contacts" class="remove-decoration">Contacts</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- top -->
+    <div class="flex-center my-40">
+      <div class="max-width-1">
+        <div class="grid top_content gap-10">
+          <div class="top_content_left">
+            <div class="top_content_left_text fs-3 font-fam-2 line-height-4">
+              <div class="main_header_text">Providing Timber purchase and export services since 2005</div>
+            </div>
+            <div class="grid gtc-auto-auto">
+              <a href="#contacts" class="remove-decoration contacts_ref"
+                ><button class="button button-1 mt-10 contact_us_btn">Contact Us</button></a
+              >
+            </div>
+            <div></div>
+          </div>
+          <div class="top_content_right min-h-435">
+            <div class="bg-col-1 op-40"><canvas id="mercor_model"></canvas></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3 Summary boxes -->
+    <div class="flex-center">
+      <div class="max-width-1">
+        <div class="grid two summary_grid gap-20 inset_padding">
+          <div class="shifted_margin_test summary_grid_box">
+            <div class="summary_bot_text flex-center">Annual affiliate turnover exceeds 20M EUR</div>
+            <div class="summary_svg_parent flex-center">
+              <img src="/svg/01.svg" alt="" class="summary_svg_ico transform_2" />
+            </div>
+          </div>
+
+          <div class="shifted_margin_test summary_grid_box">
+            <div class="summary_bot_text flex-center">Exports to Asian and West African markets</div>
+            <div class="summary_svg_parent flex-center">
+              <img src="/svg/02.svg" alt="" class="summary_svg_ico" />
+            </div>
+          </div>
+
+          <div class="shifted_margin_test summary_grid_box">
+            <div class="summary_bot_text flex-center">One of the largest exporters in Baltics</div>
+            <div class="summary_svg_parent flex-center">
+              <img src="/svg/03.svg" alt="" class="summary_svg_ico" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main info block -->
+    <hr class="hr-1-3" />
+    <div class="flex-center bg-col-3 pt-90 pb-90">
+      <div class="max-width-1">
+        <div class="third grid services_grid gap-30">
+          <div class="third_left">
+            <div class="header-3" id="services">Building Materials</div>
+            <div class="text-2">
+              Work from the Riga port terminal warehouses. Constantly available specification for 5000-8000^m3
+              timber in multiple quality levels, which is purchased from all of the major sawmills in the
+              Baltic States.
+              <br />
+              <br />
+              Specifications for the purchased materials are developed together with our partners on the basis
+              of the market and customer needs, as well as the market situation.
+              <br />
+              <br />
+
+              Materials are sorted by Scandinavian quality standards.
+            </div>
+          </div>
+          <div class="third_left">
+            <div class="header-3">Packing Materials</div>
+            <div class="text-2">
+              We offer pine / spruce packing timber in standard sizes of 14x70, 75x75, 16x75/100 and
+              19x75/100.
+              <br />
+              <br />
+              The packing materials are cross-cut to 800/1000/1200 milimeter lenghts, as well full-lenghts of
+              3 - 6 meters.
+              <br />
+              <br />
+
+              The materials are divided into multiple quality groups, in accordance to the customer needs.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4 images grid -->
+    <div class="flex-center">
+      <div class="max-width-1">
+        <div class="grid inset_padding gap-20 three_img_grid">
+          <div class="three_img_child border-rad-4">
+            <img
+              src="img/004.webp"
+              alt=""
+              class="img-cover both-100 border-rad-4 third_img th_img_1"
+              loading="lazy"
+            />
+          </div>
+          <div class="three_img_child">
+            <img
+              src="img/002.webp"
+              alt=""
+              class="img-cover both-100 border-rad-4 third_img th_img_2"
+              loading="lazy"
+            />
+          </div>
+          <div class="three_img_child conditional_hide">
+            <img
+              src="img/003.webp"
+              alt=""
+              class="img-cover both-100 border-rad-4 third_img th_img_3"
+              loading="lazy"
+            />
+          </div>
+          <div class="three_img_child conditional_hide">
+            <img
+              src="img/001.webp"
+              alt=""
+              class="img-cover both-100 border-rad-4 third_img th_img_4"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- cls / decking -->
+    <div class="flex-center">
+      <div class="max-width-1 four cls_decking mt-14">
+        <div class="header-3">CLS / Decking</div>
+        <div class="text-2 mb-10">
+          Base lenghts for the mentioned materials are 3.6 and 4.8 meters. We offer CLS specification
+          materials
+        </div>
+
+        <div class="grid cls_cards_grid py-10">
+          <div class="grid cls_card border-rad-4">
+            <div class="cls_padding text-col-3 fs-8 font-fam-3 cls_card_header">
+              Terrace Boards, standard / non-standard
+            </div>
+            <hr class="hr-1-3" />
+            <div class="cls_padding grid cls_card_options_grid">
+              <div class="flex-center cls_option">15 x 95</div>
+              <div class="flex-center cls_option">20 x 120</div>
+              <div class="flex-center cls_option">28 x 120</div>
+              <div class="flex-center cls_option">28 x 145</div>
+              <div class="flex-center cls_option">32 x 120</div>
+              <div class="flex-center cls_option">32 x 145</div>
+            </div>
+          </div>
+          <div class="grid cls_card border-rad-4">
+            <div class="cls_padding text-col-3 fs-8 font-fam-3 cls_card_header">Pine / Spruce</div>
+            <hr class="hr-1-3" />
+            <div class="cls_padding grid cls_card_options_grid">
+              <div class="flex-center cls_option">38 x 63</div>
+              <div class="flex-center cls_option">38 x 89</div>
+              <div class="flex-center cls_option">38 x 140</div>
+              <div class="flex-center cls_option removed_bg"></div>
+              <div class="flex-center cls_option removed_bg"></div>
+              <div class="flex-center cls_option removed_bg"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact us grid -->
+    <div class="flex-center">
+      <div class="max-width-1 my-70 contact_us_second">
+        <div class="bg-col-2 shadow-1 border-rad-3 contact_us_first">
+          <div class="grid py-40 px-40 contacts_grid_">
+            <div class="contacts_left fs-4 font-fam-2 flex-center" id="contacts">Contact Us</div>
+            <div class="contacts_right_ grid-center">
+              <div class="grid gtc-1-1 email_phone_grid">
+                <a href="mailto:info@mercor.lv" class="remove-decoration contact_favico_parent flex-center">
+                  <img src="/svg/email.svg" alt="" class="h-18 flex-center contacts_svg_ico" />
+                  <div class="contacts_label">Email</div>
+                </a>
+
+                <a href="tel:+37126114329" class="remove-decoration contact_favico_parent flex-center">
+                  <img src="/svg/phone.svg" alt="" class="h-22 flex-center contacts_svg_ico" />
+                  <div class="contacts_label">Phone</div></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <hr class="hr-2-4" />
+    <div class="flex-center bg-col-1">
+      <div class="max-width-1">
+        <div class="grid footer_grid text-col-2">
+          <div class="footer_child">
+            <div class="footer_label">Address</div>
+            <div class="footer_value">
+              <div>Dzelzavas street 117,</div>
+              <div>Riga, Latvia, LV-1021</div>
+            </div>
+          </div>
+          <div class="footer_child">
+            <div class="footer_label">Facebook</div>
+            <div class="footer_value">
+              <a
+                href="https://www.facebook.com/asmercor/"
+                rel="noreferrer"
+                target="_blank"
+                style="text-decoration: none"
+                class="fw700"
+                >facebook.com/asmercor</a
+              >
+            </div>
+          </div>
+          <div class="footer_child">
+            <div class="footer_label">Phone</div>
+            <div class="footer_value">
+              <a href="tel:+37126114329">+371 261 14 329</a>
+            </div>
+          </div>
+
+          <div class="footer_child">
+            <div class="footer_label">Email</div>
+            <div class="footer_value">
+              <a href="mailto:info@mercor.lv"> info@mercor.lv</a>
+            </div>
+          </div>
+
+          <div class="footer_child">
+            <div class="footer_label">VAT No</div>
+            <div class="footer_value">LV40003754321</div>
+          </div>
+
+          <div class="footer_child">
+            <div class="footer_label">Reg.-No</div>
+            <div class="footer_value">40003754321</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- end  -->
+    <hr class="hr-2-4" />
+    <div class="flex-center bg-col-1">
+      <div class="max-width-1">
+        <div class="font-fam-3 text-col-2 py-20">JSC MERCOR</div>
+      </div>
+    </div>
+
+    <!--  -->
+    <div id="app"></div>
+    <script type="module" src="/main.js"></script>
+
+    <script>
+      glowCookies.start('en', {
+        analytics: 'G-FNBYLCN654',
+        hideAfterClick: true,
+      })
+    </script>
+  </body>
+</html>

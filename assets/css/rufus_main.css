@@ -1,0 +1,946 @@
+@font-face {
+  font-family: "Inter-Bold";
+  src: url(../fonts/Inter-Bold.ttf);
+}
+
+@font-face {
+  font-family: "Inter-SemiBold";
+  src: url(../fonts/Inter-Bold.ttf);
+}
+
+@font-face {
+  font-family: "Inter-Medium";
+  src: url(../fonts/Inter-Medium.ttf);
+}
+
+@font-face {
+  font-family: "Inter-Regular";
+  src: url(../fonts/Inter-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Inter-Light";
+  src: url(../fonts/Inter-Regular.ttf);
+}
+
+
+:root {
+  /* max-width for the main content */
+  --max-width-1: 1050px;
+
+  /* font-family */
+  --font-fam-1: Inter-Bold;
+  --font-fam-2: Inter-SemiBold;
+  --font-fam-3: Inter-Medium;
+  --font-fam-4: Inter-Regular;
+  --font-fam-5: Inter-Light;
+  --font-fam-6: Inter-Light;
+
+  /* define the color palette */
+  --bg-col-1: #000000;
+  --bg-col-2: #ffffff;
+  --bg-col-3: rgb(247, 247, 247);
+  --bg-col-4: #ffffff;
+  --bg-col-5: #ffffff;
+  --bg-col-6: #050505;
+
+  /* font-color */
+  --text-col-1: #161616;
+  --text-col-2: #ffffff;
+  --text-col-3: #5c5c5c;
+  --text-col-4: #ffffff;
+  --text-col-5: #ffffff;
+  --text-col-6: #ffffff;
+
+  /* font-size */
+  --fs-1: 88px;
+  --fs-2: 64px;
+  --fs-3: 44px;
+  --fs-4: 28px;
+  --fs-5: 22px;
+  --fs-6: 20px;
+  --fs-7: 18px;
+  --fs-8: 16px;
+  --fs-9: 14px;
+
+  /* border-radius */
+  --border-rad-1: 22px;
+  --border-rad-2: 12px;
+  --border-rad-3: 10px;
+  --border-rad-4: 6px;
+  --border-rad-5: 5px;
+  --border-rad-6: 5px;
+
+  /* hr color  */
+  --hr-col-1: rgba(29, 29, 29, 0.4);
+  --hr-col-2: rgba(29, 29, 29, 0.2);
+  --hr-col-3: rgba(29, 29, 29, 0.1);
+
+  /* border */
+  --border-1: 1px solid rgba(48, 48, 48, 0.2);
+  --border-2: 2px solid rgba(48, 48, 48, 0.15);
+  --border-3: 3px solid rgba(48, 48, 48, 0.08);
+
+  --border-1-1: 1px solid rgba(48, 48, 48, 0.3);
+  --border-1-2: 1px solid rgba(48, 48, 48, 0.15);
+  --border-1-3: 1px solid rgba(48, 48, 48, 0.08);
+
+  --border-2-1: 2px solid rgba(48, 48, 48, 0.3);
+  --border-2-2: 2px solid rgba(48, 48, 48, 0.15);
+  --border-2-3: 2px solid rgba(48, 48, 48, 0.08);
+
+  --border-3-1: 3px solid rgba(48, 48, 48, 0.2);
+  --border-3-2: 3px solid rgba(48, 48, 48, 0.09);
+  --border-3-3: 3px solid rgba(146, 48, 48, 0.06);
+
+  /*  */
+  --button-danger-bg: rgb(184, 75, 75);
+  --button-danger-bg-hover: rgb(153, 43, 43);
+  --button-danger-bg-active: rgb(53, 53, 53);
+
+  --button-success-bg: rgb(51, 160, 60);
+  --button-success-bg-hover: rgb(16, 118, 24);
+  --button-success-bg-active: rgb(53, 53, 53);
+
+  /* transitions */
+  --transition-1: all 0.12s ease-in;
+  --transition-2: all 0.08s ease-in;
+  --transition-3: all 0.08s ease-in;
+
+  /* box-shadow */
+  --shadow-1: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  --shadow-2: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  --shadow-3: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+
+  --shadow-4: rgba(0, 0, 0, 0.3) 0px 3px 5px;
+  --shadow-5: rgba(0, 0, 0, 0.8) 0px 3px 5px;
+
+  /* letter-spacing */
+  --letter-spacing-1: 0.1em;
+  --letter-spacing-2: 0.05em;
+  --letter-spacing-3: 0.025em;
+  --letter-spacing-4: 0em;
+  --letter-spacing-5: -0.025em;
+  --letter-spacing-6: -0.05em;
+}
+
+/* 
+
+--- Purging CSS for Single Page Apps
+
+You don't really need a seperate config file for postcss to purge unused 
+classes for small SPA projects. Just copy the following into your package.json file
+
+  "scripts": {
+    ...
+    "postbuild": "purgecss --css dist/assets/*.css --content dist/assets/*.js -o dist/assets/  --safelist html body"
+  },
+
+If this is added, every time you run `npm run build`, the postbuild script will
+also be triggered and purge the css in the dist folder.
+
+* note that you need to install purgecss as a dependency, if you're gonna do 
+automatic builds for Netlify and stuff
+
+
+--- importing fonts example
+
+  @font-face {
+    font-family: "Poppins-Bold";
+    src: url(../fonts/Poppins-Bold.ttf);
+  } 
+
+
+--- Centering content + full width backgrounds in html
+
+    <div class="flex-center">
+        <div class="max-width-1">content</div>
+    </div>
+
+
+--- Automatic grid example
+
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+
+
+*/
+
+/* Changing predefined html properties */
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+  -webkit-text-size-adjust: 100%;
+  /* make the scrollbar not take up the total space of the page, so that there is no shift once it appears / dissapears */
+  overflow-y: scroll;
+  cursor: context-menu;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
+    sans-serif, Apple Color Emoji, Segoe UI Emoji;
+}
+
+/* Other possible fonts
+  font-family: "Helvetica", Arial, sans-serif;
+  font-family: Inter, system-ui, sans-serif;
+  font-family: Tenor Sans, Georgia, serif;
+  font-family: Roboto Mono, Menlo, monospace;
+*/
+
+::selection {
+  color: white;
+  background-color: rgba(126, 167, 243, 0.7);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+pre {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  outline: inherit;
+  background: none;
+  cursor: pointer;
+  color: inherit;
+  font: inherit;
+  border: none;
+  padding: 0;
+  /* disables text select */
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  user-select: none;
+}
+
+img {
+  /* disables text select */
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  user-select: none;
+}
+
+input,
+textarea {
+  font-family: inherit;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-family: var(--font-fam-5);
+}
+
+textarea {
+  resize: vertical;
+}
+
+input:focus,
+textarea:focus {
+  outline: none; /* removes the border on focus for inputs */
+}
+
+input::placeholder,
+textarea::placeholder {
+  opacity: 1;
+  color: #9ca3af;
+  font-size: 14px;
+  font-family: var(--font-fam-5);
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+  color: inherit;
+}
+
+/* grid classes */
+.grid {
+  display: grid;
+}
+.grid-center {
+  display: grid;
+  place-content: center;
+}
+
+/* flex classes */
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flex {
+  display: flex;
+}
+.flex-row {
+  flex-direction: row;
+}
+.flex-column {
+  flex-direction: column;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.flex-nowrap {
+  flex-wrap: nowrap;
+}
+
+/* height and width */
+.height-100 {
+  height: 100%;
+}
+.width-100 {
+  width: 100%;
+}
+.both-100 {
+  width: 100%;
+  height: 100%;
+}
+
+/* classes dependent on the css variables */
+.max-width-1 {
+  width: var(--max-width-1);
+}
+
+/* background-color */
+.bg-col-1 {
+  background-color: var(--bg-col-1);
+}
+.bg-col-2 {
+  background-color: var(--bg-col-2);
+}
+.bg-col-3 {
+  background-color: var(--bg-col-3);
+}
+.bg-col-4 {
+  background-color: var(--bg-col-4);
+}
+.bg-col-5 {
+  background-color: var(--bg-col-5);
+}
+.bg-col-6 {
+  background-color: var(--bg-col-6);
+}
+
+/* tw palette */
+.temp-bg-col-1 {
+  background-color: #071330;
+}
+.temp-bg-col-2 {
+  background-color: #0c4160;
+}
+.temp-bg-col-3 {
+  background-color: #738fa7;
+}
+.temp-bg-col-4 {
+  background-color: #c3ceda;
+}
+.temp-bg-col-5 {
+  background-color: #c3ceda57;
+}
+.temp-bg-col-6 {
+  background-color: #e8e8e857;
+}
+
+/* bord-rad */
+.border-rad-1 {
+  border-radius: var(--border-rad-1);
+}
+.border-rad-2 {
+  border-radius: var(--border-rad-2);
+}
+.border-rad-3 {
+  border-radius: var(--border-rad-3);
+}
+.border-rad-4 {
+  border-radius: var(--border-rad-4);
+}
+.border-rad-5 {
+  border-radius: var(--border-rad-5);
+}
+.border-rad-6 {
+  border-radius: var(--border-rad-6);
+}
+
+/* font-family */
+.font-fam-1 {
+  font-family: var(--font-fam-1);
+}
+.font-fam-2 {
+  font-family: var(--font-fam-2);
+}
+.font-fam-3 {
+  font-family: var(--font-fam-3);
+}
+.font-fam-4 {
+  font-family: var(--font-fam-4);
+}
+.font-fam-5 {
+  font-family: var(--font-fam-5);
+}
+.font-fam-6 {
+  font-family: var(--font-fam-6);
+}
+
+/* text-col */
+.text-col-1 {
+  color: var(--text-col-1);
+}
+.text-col-2 {
+  color: var(--text-col-2);
+}
+.text-col-3 {
+  color: var(--text-col-3);
+}
+.text-col-4 {
+  color: var(--text-col-4);
+}
+.text-col-5 {
+  color: var(--text-col-5);
+}
+.text-col-6 {
+  color: var(--text-col-6);
+}
+
+/* font-size */
+.fs-1 {
+  font-size: var(--fs-1);
+}
+.fs-2 {
+  font-size: var(--fs-2);
+}
+.fs-3 {
+  font-size: var(--fs-3);
+}
+.fs-4 {
+  font-size: var(--fs-4);
+}
+.fs-5 {
+  font-size: var(--fs-5);
+}
+.fs-6 {
+  font-size: var(--fs-6);
+}
+.fs-7 {
+  font-size: var(--fs-7);
+}
+.fs-8 {
+  font-size: var(--fs-8);
+}
+.fs-9 {
+  font-size: var(--fs-9);
+}
+
+.line-height-1 {
+  line-height: 1.4;
+}
+.line-height-2 {
+  line-height: 1.35;
+}
+.line-height-3 {
+  line-height: 1.28;
+}
+.line-height-4 {
+  line-height: 1.2;
+}
+
+/* Define based on project needs, add font weight and stuff */
+.header-1 {
+  font-size: var(--fs-1);
+  line-height: 1.4;
+}
+.header-2 {
+  font-size: var(--fs-2);
+  line-height: 1.45;
+}
+.header-3 {
+  font-family: var(--font-fam-2);
+  font-size: var(--fs-4);
+  line-height: 1.545;
+  margin-bottom: 3px;
+}
+.header-4 {
+  font-size: var(--fs-4);
+}
+.header-5 {
+  font-size: var(--fs-5);
+}
+
+/* text */
+.text-1 {
+  font-size: var(--fs-6);
+  line-height: 1.6;
+}
+.text-2 {
+  font-size: var(--fs-8);
+  font-family: var(--font-fam-5);
+  line-height: 1.62;
+  max-width: 490px;
+  color: #292929;
+}
+.text-3 {
+  font-size: var(--fs-8);
+  line-height: 1.688;
+}
+.text-4 {
+  font-size: var(--fs-9);
+  line-height: 1.688;
+}
+
+/* transition */
+.transition-1 {
+  transition: var(--transition-1);
+}
+.transition-2 {
+  transition: var(--transition-2);
+}
+.transition-3 {
+  transition: var(--transition-3);
+}
+/* disable transition when you click on stuff, so that there is no delay between the state change */
+.transition-1:active {
+  transition: none;
+}
+.transition-2:active {
+  transition: none;
+}
+.transition-3:active {
+  transition: none;
+}
+
+/* shadows taken from here, a lot of examples to choose from
+https://getcssscan.com/css-box-shadow-examples*/
+.shadow-1 {
+  box-shadow: var(--shadow-1);
+}
+.shadow-2 {
+  box-shadow: var(--shadow-2);
+}
+.shadow-3 {
+  box-shadow: var(--shadow-3);
+}
+.shadow-4 {
+  box-shadow: var(--shadow-4);
+}
+.shadow-5 {
+  box-shadow: var(--shadow-5);
+}
+
+/* hr with a height of 1px, and decreasing color intensity*/
+.hr-1-1 {
+  border: 0;
+  height: 1px;
+  background: var(--hr-col-1);
+}
+.hr-1-2 {
+  border: 0;
+  height: 1px;
+  background: var(--hr-col-2);
+}
+.hr-1-3 {
+  border: 0;
+  height: 1px;
+  background: var(--hr-col-3);
+}
+/* hr with a height of 2px, and decreasing color intensity*/
+.hr-2-1 {
+  border: 0;
+  height: 2px;
+  background: var(--hr-col-1);
+}
+.hr-2-2 {
+  border: 0;
+  height: 2px;
+  background: var(--hr-col-2);
+}
+.hr-2-3 {
+  border: 0;
+  height: 2px;
+  background: var(--hr-col-3);
+}
+
+.hr-2-4 {
+  border: 0;
+  height: 1px;
+  background: rgb(49, 49, 49);
+}
+
+/* Sizes taken from tw */
+.letter-spacing-1 {
+  letter-spacing: var(--letter-spacing-1);
+}
+.letter-spacing-2 {
+  letter-spacing: var(--letter-spacing-2);
+}
+.letter-spacing-3 {
+  letter-spacing: var(--letter-spacing-3);
+}
+.letter-spacing-4 {
+  letter-spacing: var(--letter-spacing-4);
+}
+.letter-spacing-5 {
+  letter-spacing: var(--letter-spacing-5);
+}
+.letter-spacing-6 {
+  letter-spacing: var(--letter-spacing-6);
+}
+
+/* border */
+.border-1 {
+  border: var(--border-1);
+}
+.border-2 {
+  border: var(--border-2);
+}
+.border-3 {
+  border: var(--border-3);
+}
+
+.border-1-1 {
+  border: var(--border-1-1);
+}
+.border-1-2 {
+  border: var(--border-1-2);
+}
+.border-1-3 {
+  border: var(--border-1-3);
+}
+
+.border-2-1 {
+  border: var(--border-2-1);
+}
+.border-2-2 {
+  border: var(--border-2-2);
+}
+.border-2-3 {
+  border: var(--border-2-3);
+}
+
+.border-3-1 {
+  border: var(--border-3-1);
+}
+.border-3-2 {
+  border: var(--border-3-2);
+}
+.border-3-3 {
+  border: var(--border-3-3);
+}
+
+.button-danger {
+  color: rgba(255, 255, 255, 0.95);
+  background: var(--button-danger-bg);
+  border: 2px solid rgba(238, 238, 238, 0.3);
+}
+.button-danger:hover {
+  background: var(--button-danger-bg-hover);
+  border: 2px solid rgba(238, 238, 238, 0.4);
+}
+.button-danger:active {
+  background: var(--button-danger-bg-active);
+  border: 2px solid rgb(238, 238, 238);
+}
+.button-success {
+  color: rgba(255, 255, 255, 0.95);
+  background: var(--button-success-bg);
+  border: 2px solid rgba(238, 238, 238, 0.4);
+}
+.button-success:hover {
+  background: var(--button-success-bg-hover);
+  border: 2px solid rgba(238, 238, 238, 0.4);
+}
+.button-success:active {
+  background: var(--button-success-bg-active);
+  border: 2px solid rgb(238, 238, 238);
+}
+
+@media screen and (max-width: 1200px) {
+  .max-width-1 {
+    padding: 0px 40px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  :root {
+    --fs-1: 68px;
+    --fs-2: 44px;
+    --fs-3: 34px;
+    --fs-4: 27px;
+    --fs-5: 22px;
+    --fs-6: 20px;
+    --fs-7: 18px;
+    --fs-8: 15px;
+    --fs-9: 14px;
+  }
+}
+/* opacity */
+.op-0 {
+  opacity: 0%;
+}
+.op-5 {
+  opacity: 5%;
+}
+.op-10 {
+  opacity: 10%;
+}
+.op-15 {
+  opacity: 15%;
+}
+.op-20 {
+  opacity: 20%;
+}
+.op-25 {
+  opacity: 25%;
+}
+.op-30 {
+  opacity: 30%;
+}
+.op-35 {
+  opacity: 35%;
+}
+.op-40 {
+  opacity: 40%;
+}
+.op-45 {
+  opacity: 45%;
+}
+.op-50 {
+  opacity: 50%;
+}
+.op-55 {
+  opacity: 55%;
+}
+.op-60 {
+  opacity: 60%;
+}
+.op-65 {
+  opacity: 65%;
+}
+.op-70 {
+  opacity: 70%;
+}
+.op-75 {
+  opacity: 75%;
+}
+.op-80 {
+  opacity: 80%;
+}
+.op-85 {
+  opacity: 85%;
+}
+.op-90 {
+  opacity: 90%;
+}
+.op-95 {
+  opacity: 95%;
+}
+.op-100 {
+  opacity: 100%;
+}
+
+/* font-weight */
+.fw-100 {
+  font-weight: 100;
+}
+.fw-200 {
+  font-weight: 200;
+}
+.fw-300 {
+  font-weight: 300;
+}
+.fw-400 {
+  font-weight: 400;
+}
+.fw-500 {
+  font-weight: 500;
+}
+.fw-600 {
+  font-weight: 600;
+}
+.fw-700 {
+  font-weight: 700;
+}
+.fw-800 {
+  font-weight: 800;
+}
+.fw-900 {
+  font-weight: 900;
+}
+
+/* z-index */
+.z-10 {
+  z-index: 10;
+}
+.z-20 {
+  z-index: 20;
+}
+.z-30 {
+  z-index: 20;
+}
+.z-40 {
+  z-index: 40;
+}
+.z-50 {
+  z-index: 50;
+}
+
+/* text-side */
+.text-left {
+  text-align: left;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.text-justify {
+  text-align: justify;
+}
+
+/* buttons */
+.button-1 {
+  /* dimensions */
+  min-width: 118px;
+  min-height: 32px;
+
+  /* width: 118px; */
+  /* height: 32px; */
+  /*  */
+  font-family: var(--font-fam-3);
+  font-size: 16px;
+  /* font-weight: 700; */
+  /* border-radius: 7px; */
+  border: 1px solid rgba(177, 174, 174, 0.3);
+  background: rgb(0, 0, 0);
+  color: white;
+  padding: 10px 0px;
+  /* flex center */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /*  */
+}
+
+/* other helper classes */
+.italic {
+  font-style: italic;
+}
+.underline {
+  text-decoration: underline;
+}
+.hidden {
+  display: none;
+}
+.round {
+  border-radius: 999px;
+}
+.img-cover {
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.align-text-vertically {
+  display: flex;
+  align-items: center;
+}
+
+.remove-decoration {
+  text-decoration: none;
+}
+
+.disable-text-select {
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  user-select: none;
+}
+/* rows */
+.gtr-1-1-1-1 {
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+.gtr-1-1-1 {
+  grid-template-rows: 1fr 1fr 1fr;
+}
+.gtr-1-1 {
+  grid-template-rows: 1fr 1fr;
+}
+.gtr-1 {
+  grid-template-rows: 1fr;
+}
+
+/* rows - 1fr & auto  */
+.gtr-1-auto {
+  grid-template-rows: 1fr auto;
+}
+.gtr-auto-1 {
+  grid-template-rows: auto 1fr;
+}
+
+/* rows - auto */
+.gtr-auto-auto-auto {
+  grid-template-rows: auto auto auto;
+}
+.gtr-auto-auto {
+  grid-template-rows: auto auto;
+}
+.gtr-auto {
+  grid-template-rows: auto;
+}
+
+/* grid template columns */
+.gtc-1-1-1-1 {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.gtc-1-1-1 {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.gtc-1-1 {
+  grid-template-columns: 1fr 1fr;
+}
+.gtc-1 {
+  grid-template-columns: 1fr;
+}
+/* 1fr & auto  */
+.gtc-1-auto {
+  grid-template-columns: 1fr auto;
+}
+.gtc-auto-1 {
+  grid-template-columns: auto 1fr;
+}
+
+/* auto */
+.gtc-auto-auto {
+  grid-template-columns: auto auto auto;
+}
+.gtc-auto-auto {
+  grid-template-columns: auto auto;
+}
+.gtc-auto {
+  grid-template-columns: auto;
+}
