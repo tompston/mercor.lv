@@ -54,8 +54,9 @@
 
   /* font-size */
   --fs-1: 88px;
-  --fs-2: 64px;
+  --fs-2: 50px;
   --fs-3: 44px;
+  --fs-3: 45px;
   --fs-4: 28px;
   --fs-5: 22px;
   --fs-6: 20px;
@@ -461,7 +462,7 @@ a:active {
   line-height: 1.28;
 }
 .line-height-4 {
-  line-height: 1.2;
+  line-height: 1.08;
 }
 
 /* Define based on project needs, add font weight and stuff */

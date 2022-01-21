@@ -30,7 +30,7 @@ for (let i = 0; i < third_img_grid.length; i++) {
     delay: i / 10,
     ease: 'power4.out',
     scrollTrigger: {
-      trigger: '.third_img',
+      trigger: '.gallery_box',
     },
   })
 }
