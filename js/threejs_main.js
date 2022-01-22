@@ -97,7 +97,8 @@ loader.load(
     model.scale.set(SCALE, SCALE, SCALE)
 
     model.castShadow = true
-    model.position.set(0, 0, 0)
+    // model.position.set(0, 0, 0)
+    model.position.set(2, 0, 0)
 
     mixer = new THREE.AnimationMixer(model)
 
