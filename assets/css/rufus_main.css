@@ -173,7 +173,7 @@ html {
   -webkit-text-size-adjust: 100%;
   /* make the scrollbar not take up the total space of the page, so that there is no shift once it appears / dissapears */
   overflow-y: scroll;
-  cursor: context-menu;
+  cursor: default;
 }
 
 body {
