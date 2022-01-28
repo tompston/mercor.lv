@@ -7,13 +7,13 @@ import { DRACOLoader } from '../node_modules/three/examples/jsm/loaders/DRACOLoa
 import matcap_1_link from '/models/wood.png'
 
 export function init_camera(container_width, container_height) {
-  const fov = 40
+  const fov = 35
   const aspect = container_width / container_height // the canvas default
   const near = 1
   const far = 100
   const camera = new THREE.PerspectiveCamera(fov, aspect, near, far)
   let cam_cord = 13
-  camera.position.set(cam_cord, 18, cam_cord)
+  camera.position.set(cam_cord, 11, cam_cord)
 
   return camera
 }
