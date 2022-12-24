@@ -75,6 +75,7 @@ body {
 .summary_grid_box {
   background: white;
   box-shadow: var(--shadow-1);
+  border-radius: var(--border-rad-4);
   padding: 30px;
   /*  */
   font-family: var(--font-fam-3);

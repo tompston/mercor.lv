@@ -2,8 +2,6 @@ import * as THREE from 'three'
 import { OrbitControls } from '../node_modules/three/examples/jsm/controls/OrbitControls.js'
 import { GLTFLoader } from '../node_modules/three/examples/jsm/loaders/GLTFLoader'
 import { DRACOLoader } from '../node_modules/three/examples/jsm/loaders/DRACOLoader.js'
-// import Stats from '../node_modules/three/examples/jsm/libs/stats.module'
-
 import matcap_1_link from '/models/wood.png'
 
 export function init_camera(container_width, container_height) {
@@ -12,11 +10,12 @@ export function init_camera(container_width, container_height) {
   const near = 1
   const far = 100
   const camera = new THREE.PerspectiveCamera(fov, aspect, near, far)
-  let cam_cord = 13
-  camera.position.set(cam_cord, 11, cam_cord)
+  let cam_cord = 20
+  camera.position.set(cam_cord, 24, cam_cord)
 
   return camera
 }
+
 export function helper_grid(scene, size, divisions) {
   let gridHelper = new THREE.GridHelper(size, divisions)
   return scene.add(gridHelper)
@@ -34,8 +33,7 @@ export function resizeCanvasToDisplaySize(camera, renderer) {
   }
 }
 
-// const stats = new Stats()
-// const clock = new THREE.Clock()
+
 
 const model_name = 'models/mercor_model.glb'
 const container_name = '.top_content_right'
@@ -62,7 +60,7 @@ scene.background = new THREE.Color(0xffffff)
 let mixer
 const camera = init_camera(container_width, container_height)
 
-// -- initialize controls for interactivity
+// initialize controls for interactivity
 const controls = new OrbitControls(camera, renderer.domElement)
 controls.target.set(1, 1, 1) // controls.update();
 controls.enablePan = true
@@ -71,7 +69,7 @@ controls.maxDistance = 40
 controls.enableDamping = true
 controls.dampingFactor = 0.025
 
-// - light source
+// light source
 const lightsource = new THREE.SpotLight(0xffffff, 50, 24)
 lightsource.position.set(-2, 10, 0)
 lightsource.angle = 1
@@ -84,20 +82,18 @@ dracoLoader.setDecoderPath('js/libs/draco/gltf/')
 const loader = new GLTFLoader()
 loader.setDRACOLoader(dracoLoader)
 
-// -- laod the matcap with TextureLoader
+// laod the matcap with TextureLoader
 const textureLoader = new THREE.TextureLoader()
 const matcap_1 = textureLoader.load(matcap_1_link)
 
 loader.load(
   model_name,
   function (gltf) {
+    
     let model = gltf.scene
-
     const SCALE = 1.4
     model.scale.set(SCALE, SCALE, SCALE)
-
     model.castShadow = true
-    // model.position.set(0, 0, 0)
     model.position.set(2, 0, 0)
 
     mixer = new THREE.AnimationMixer(model)
@@ -108,7 +104,6 @@ loader.load(
 
     // assign the imported matcap to the model
     main_mesh.material = new THREE.MeshMatcapMaterial({
-      // normalMap: normalmap
       matcap: matcap_1,
     })
 
@@ -122,14 +117,8 @@ loader.load(
 
 function animate() {
   requestAnimationFrame(animate)
-  //   const delta = clock.getDelta()
-
   resizeCanvasToDisplaySize(camera, renderer)
-
-  //   mixer.update(delta)
   controls.update()
-  //   stats.update()
-
   renderer.render(scene, camera)
 }
 
